@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="root" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <ImageView id="background" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" x="0.0" StackPane.alignment="TOP_LEFT">
+      <image>
+        <Image url="@../assets/images/background.jpg" />
+      </image>
+    </ImageView>
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+      <bottom>
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <ImageView fitHeight="150.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../assets/images/dock2.png" />
+              </image>
+            </ImageView>
+            <HBox id="iconHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+              <children>
+                <Label text="Clicks:" textFill="RED">
+                  <effect>
+                    <Reflection bottomOpacity="0.25984251968503935" fraction="0.8759842519685039" topOpacity="0.7519685039370079" />
+                  </effect>
+                  <font>
+                    <Font size="20.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Label id="clickCounter" font="$x1" text="0" textFill="RED">
+                  <effect>
+                    <Glow level="0.8161290322580645">
+                      <input>
+                        <Reflection bottomOpacity="0.25984251968503935" fraction="0.8759842519685039" topOpacity="0.7519685039370079" />
+                      </input>
+                    </Glow>
+                  </effect>
+                </Label>
+              </children>
+            </HBox>
+          </children>
+        </StackPane>
+      </bottom>
+      <center>
+        <StackPane prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <Pane id="ballHuntBoard" prefHeight="200.0" prefWidth="200.0" visible="true" />
+            <ScrollPane id="cvScroller" fitToHeight="false" fitToWidth="false" hbarPolicy="NEVER" opacity="1.0" pannable="false" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" visible="false">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="499.0000999999975" prefWidth="799.0">
+                  <children>
+                    <TextArea editable="false" mouseTransparent="false" opacity="1.0" prefHeight="500.0" prefWidth="799.0" promptText="" text="Mitt namn är Fredrik Christenson och jag söker en praktikplats hos ett företag som vill leverera kostnadseffektiva lösningar.
+					&#10;Vid 10 års ålder införskaffade jag min första dator och har sedan dess plockat dem i smådelar och byggt ihop dem igen, jag har även studerat datavetenskap på både Harvard och Masachussets Institute of Technology, utöver den Javautvecklingsutbildning jag läser nu.
+					&#10;Min glöd för att skapa IT-lösningar är svår att matcha, jag tar till mig kunskap snabbt i jämförelse med mina klasskamrater och har fått en naturlig mentorsroll.
+					&#10;&#10;Vid sidan av driver jag en blygsam webbutvecklingsfirma och har sedan 2 år tillbaka tagit mig an privata webbprojekt, där jag arbetar med Php, JavaScript och även MYSQL.
+					&#10;Utöver detta har jag grundläggande kunskaper i Python, och C.
+					&#10;Självklart bygger jag mindre system på fritiden och har flertalet småprojekt.
+					&#10;Besök gärna mitt konto https://bitbucket.org/Pragvakten för att ta del av ett par av dem.&#10;" visible="true" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Pane id="video" disable="true" prefHeight="200.0" prefWidth="200.0" visible="false" />
+          </children>
+        </StackPane>
+      </center>
+    </BorderPane>
+  </children>
+</StackPane>
